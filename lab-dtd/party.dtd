@@ -1,0 +1,80 @@
+<!ELEMENT party (title, date, starttime, endtime?, arranger, location, price?, OSAdate?, description?, contact?, host*, toastmaster*, menu?, guestlist?)>
+
+<!-- special characters entities -->
+<!ENTITY Ouml "&#246;"> 
+<!ENTITY ouml "&#214;"> 
+<!ENTITY brkbar "&#166;"> 
+<!ENTITY ccedil "&#231;">
+
+<!-- entities for common things -->
+<!ENTITY % name "firstname, lastname"> 
+<!ENTITY % contents "food*, drink*">
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT starttime (#PCDATA)>
+<!ELEMENT endtime (#PCDATA)>
+<!ELEMENT arranger (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!-- Optional attribute for element price -->
+<!ATTLIST price unit CDATA "sek">
+
+<!ELEMENT OSAdate (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+
+<!-- types for elements in contact -->
+<!ELEMENT contact (%name;, phone,email)>
+<!ELEMENT host (%name;)>
+<!ELEMENT toastmaster (%name;)>
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!-- menu elements -->
+<!ELEMENT menu (starter?, main_course, dessert?)>
+<!ELEMENT starter (%contents;)>
+<!ELEMENT main_course (%contents;)>
+<!ELEMENT dessert (%contents;)>
+
+<!ELEMENT food (#PCDATA)>
+
+<!-- Optional attributes for element food -->
+<!ATTLIST food type (shellfish|fish|meat|vegetarian|dairy|other) #IMPLIED>
+
+<!ELEMENT drink (#PCDATA)>
+
+<!-- Optional attributes for element drink -->
+<!ATTLIST drink type (beer|red_wine|white_wine|coffee|cognac|tea|punch|other) #IMPLIED>
+
+<!-- guestlist elements-->
+<!ELEMENT guestlist (guest*)>
+<!ELEMENT guest (%name;, affiliation?, placementpreferences?, foodrestrictions?, drinkrestrictions?)>
+
+<!ELEMENT affiliation (#PCDATA)>
+
+<!ATTLIST guest id ID #REQUIRED>
+<!ATTLIST guest sex (male|female|unknown) #REQUIRED>
+
+<!ELEMENT placementpreferences (id+)>
+
+
+<!ELEMENT id EMPTY>
+
+<!-- attributes for id -->
+<!ATTLIST id nextto (yes|no) #REQUIRED>
+<!ATTLIST id id IDREF #REQUIRED>
+
+
+<!ELEMENT foodrestrictions (ingredient+)>
+
+<!ELEMENT ingredient (#PCDATA)>
+
+<!ELEMENT drinkrestrictions (drink+)>
+
+
+
