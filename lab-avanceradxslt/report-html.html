@@ -1,0 +1,250 @@
+<html>
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://www.csc.kth.sep/~bjornh/2D1517/kthstandard.mac.css" type="text/css" rel="stylesheet">
+<title>Extending IFRAtrack for general media production</title>
+</head>
+  
+<body>
+<h1>Extending IFRAtrack for general media production</h1>
+<p>
+      Authors:
+      Bj&ouml;rn Hedin, Fredrik F&auml;llstr&ouml;m</p>
+<p>
+      Keywords:
+      Workflow, XML</p>
+<p>1. <a href="#N1001E">Abstract</a>
+<br>2. <a href="#N10028">Introduction</a>
+<br>3. <a href="#N10035">Aim</a>
+<br>4. <a href="#N1003C">Method</a>
+<br>5. <a href="#N10052">Differences Between TV News and Newspapers</a>
+<br>5.1. <a href="#N1005B">Tomat</a>
+<br>5.1.1. <a href="#N10064">Gurka</a>
+<br>5.1.2. <a href="#N1006E">Banan</a>
+<br>5.1.3. <a href="#N10078">L&ouml;k</a>
+<br>5.2. <a href="#N10083">Tomat</a>
+<br>5.2.1. <a href="#N1008C">Gurka</a>
+<br>5.2.2. <a href="#N10096">Banan</a>
+<br>5.2.3. <a href="#N100A0">L&ouml;k</a>
+<br>6. <a href="#N100AC">Conclusions</a>
+<br>6.1. <a href="#N100B5">Tomat</a>
+<br>6.1.1. <a href="#N100BE">Gurka</a>
+<br>6.1.2. <a href="#N100C8">Banan</a>
+<br>6.1.3. <a href="#N100D2">L&ouml;k</a>
+<br>7. <a href="#N100DE">References</a>
+<br>8. <a href="#N100E5">Appendices</a>
+<br>
+</p>
+    
+<a name="N1001E"></a>
+<h2>1. Abstract</h2>
+      
+<p>
+        The complexity of producing a newspaper is well documented. This process has a very tight schedule involving thousands of elements linked together in a chain of activities. Attempts to supervise this process have been successful using the IFRAtrack recommendation designed for tracking activities in a newspaper environment.
+      </p>
+      
+<p>
+        In this paper we extend the IFRAtrack model to the production of television news, a process which is basically very similar to newspaper production. This is a first step towards extending production tracking with IFRAtrack to general media production, such as web publications, commercial printing and radio production.
+      </p>
+    
+    
+<a name="N10028"></a>
+<h2>2. Introduction</h2>
+      
+<p>
+        IFRAtrack is a recommendation maintained by IFRA, the international association for newspaper and media technology, for describing how newspaper are produced. Systems implementing the IFRAtrack recommendation have been used for several years and have proven useful tools for increasing effectivity and finding bottlenecks in the production chain (Hedin et al, 1997). So far, IFRAtrack has been a recommendation exclusively for newspaper production, but the concept should be possible to extend to other kinds of production.
+      </p>
+      
+<p>
+        With the new XML based version 3.0 of IFRAtrack (Hedin et al, 2000), there is a mechanism for extending the model. This can be used to add new elements, resources and activities to the existing model, but can also be used to describe completely new areas of production tracking.
+      </p>
+      
+<p>
+        This paper describes such an extension to the model. The area chosen is TV news production, an area close to newspaper production in that they both are time critical and describe a creative process with tight deadlines, and both produce a new product every day.
+      </p>
+    
+    
+<a name="N10035"></a>
+<h2>3. Aim</h2>
+      
+<p>
+        The aim of this paper is to present what we call a product model, an object model and a process model for TV news production, based on the same principles as the IFRAtrack recommendation for newspaper production. We also evaluate whether production tracking in TV news production can have the same benefits as in a newspaper context.
+      </p>
+    
+    
+<a name="N1003C"></a>
+<h2>4. Method</h2>
+      
+<p>
+        An empirical approach has been taken to gather information about how the actual product in a TV news broadcast is built up. News broadcasts from three different broadcasting companies have been recorded on videotape for  one day. These tapes have been analyzed in order to find out which sub-components the news broadcast is composed of, such as pre-recorded material, sub-titles and interviews.
+      </p>
+      
+<p>
+        Comparisons have also been made between different broadcasts from the same day and from the same broadcasting company, which can be seen as different editions of the same TV newscast.
+      </p>
+      
+<p>
+        The sub-components and the events have been categorized to the same level of detail as for newspapers in IFRAtrack, and been described in two models, which we call the product model and the object model.
+      </p>
+      
+<p>
+        To verify the product model it has been checked against news broadcasts not included in the original material, to see if they can be described using the model.  The limited amount of data however means it is difficult to draw any general conclusions.
+      </p>
+      
+<p>
+        The process model is more complex and perhaps more relevant in a tracking context. The approach for making the process model is as follows: First a visit to a TV company was made to get a basic understanding of the processes involved. Next an expert on the subject from the academic world was interviewed to get a better understanding, after which a draft model was constructed. The model was based on the same principles as the IFRAtrack process model.
+      </p>
+      
+<p>
+        Finally the models has been discussed with experts working with the actual production of TV, after which the models have been slightly modified.
+      </p>
+    
+    
+<a name="N10052"></a>
+<h2>5. Differences Between TV News and Newspapers</h2>
+     
+<p>
+       One of the main differences between TV news and newspapers from a process point of view is the difference between how the product reaches the consumer. In the newspaper case there is a complex process involving reproduction and distribution. Tracking these workflows is essential in a complete newspaper tracking system, since it is here the actual extra costs for delays are generated (Stenberg, 1994).
+     </p>
+     
+<p>
+       In the TV news case, the distribution process is the process of broadcasting. This process does not affects decisions for how to plan the TV news in the studio, unless the broadcasts are delayed for some reason. The actual transmission through the ether is the responsibility of someone else.
+     </p>
+     
+<a name="N1005B"></a>
+<h3>5.1. Tomat</h3>
+       
+<p>
+         The main difference from a product point of view is that the newspaper has a spatial layout with a non-existent time axis, whereas TV news have a temporal layout with a fixed spatial layout and usually a fixed amount of time available. 
+       </p>
+       
+<p>
+         The format planning process in a newspaper involves placing a number of departments and/or elements on a number of pages. The format, i.e. the number of pages, can be increased if there are many ads or many news items. The format is also affected by the capacity in the printing press(es), both regarding color possibilities and press speed (Stenberg, 1996)
+       </p>
+       
+<a name="N10064"></a>
+<h4>5.1.1. Gurka</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N1006E"></a>
+<h4>5.1.2. Banan</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N10078"></a>
+<h4>5.1.3. L&ouml;k</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+     
+     
+<a name="N10083"></a>
+<h3>5.2. Tomat</h3>
+       
+<p>
+         The main difference from a product point of view is that the newspaper has a spatial layout with a non-existent time axis, whereas TV news have a temporal layout with a fixed spatial layout and usually a fixed amount of time available. 
+       </p>
+       
+<p>
+         The format planning process in a newspaper involves placing a number of departments and/or elements on a number of pages. The format, i.e. the number of pages, can be increased if there are many ads or many news items. The format is also affected by the capacity in the printing press(es), both regarding color possibilities and press speed (Stenberg, 1996)
+       </p>
+       
+<a name="N1008C"></a>
+<h4>5.2.1. Gurka</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N10096"></a>
+<h4>5.2.2. Banan</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N100A0"></a>
+<h4>5.2.3. L&ouml;k</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+     
+   
+    
+<a name="N100AC"></a>
+<h2>6. Conclusions</h2>
+      
+<p>
+        An important question is of course if there are any benefits to gain by implementing a computer system for tracking TV news using this model.
+      </p>
+      
+<p>
+        There are a number of reason why production tracking for TV news might not be as successful as for newspapers.
+     </p>
+     
+<a name="N100B5"></a>
+<h3>6.1. Tomat</h3>
+       
+<p>
+         The main difference from a product point of view is that the newspaper has a spatial layout with a non-existent time axis, whereas TV news have a temporal layout with a fixed spatial layout and usually a fixed amount of time available. 
+       </p>
+       
+<p>
+         The format planning process in a newspaper involves placing a number of departments and/or elements on a number of pages. The format, i.e. the number of pages, can be increased if there are many ads or many news items. The format is also affected by the capacity in the printing press(es), both regarding color possibilities and press speed (Stenberg, 1996)
+       </p>
+       
+<a name="N100BE"></a>
+<h4>6.1.1. Gurka</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N100C8"></a>
+<h4>6.1.2. Banan</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+       
+<a name="N100D2"></a>
+<h4>6.1.3. L&ouml;k</h4>
+         
+<p>hkgjj jhgjh</p>
+         
+<p> jhndfksjhkjdf jhkj</p>
+       
+     
+    
+    
+<a name="N100DE"></a>
+<h2>7. References</h2>
+      
+<p>blah blah</p>
+    
+    
+<a name="N100E5"></a>
+<h2>8. Appendices</h2>
+      
+<p>blah blah</p>
+    
+  
+</body>
+
+</html>

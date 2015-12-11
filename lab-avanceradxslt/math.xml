@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/xsl" href="math.xsl"?>
+<math-test>
+  <h1>Multiplikation</h1>
+  <times>
+    <fact>5</fact>
+    <fib>8</fib>
+  </times>
+  
+  <h1>Vända en sträng</h1>
+  <reverse>Hej hopp i lingonskogen</reverse>
+  
+  <h1>Euclides algoritm</h1>
+  <euclides>
+    <term>693</term>
+    <term>147</term>
+  </euclides>
+</math-test>

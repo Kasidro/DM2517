@@ -3,6 +3,11 @@
 	<xsl:output method="html"/>
 
 	<xsl:template match="/">
-  		<p>Hello world excercise 2!</p>
+  		<xsl:apply-templates select=".//ELECTORAL[@VOTES > 300]"/>
+	</xsl:template>
+
+
+	<xsl:template match="ELECTORAL">
+		<p><xsl:value-of select="@NAME"/></p>
 	</xsl:template>
 </xsl:stylesheet>

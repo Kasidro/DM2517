@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ version="1.1" baseProfile="full" 
+ width="150" height="500">
+
+<g style="stroke:black" > 
+    <line x1="50" y1="0" x2="50" y2="0" style="stroke:rgb(0,0,0);stroke-width:2;" > 
+            <animate id="linedown" attributeName="y2" from="0" to="314" begin="0s; lineup.end" dur="2s" />
+            <animate id="lineup" attributeName="y2" from="314" to="0" begin="linedown.end" dur="2s" />  
+    </line> 
+</g>
+
+ <defs>
+ 	<text id="my-text" x="18" y="55" font-size="12" font-weight="bold">SVG &#228;r kul</text>
+ 	<pattern id="image" x="0%" y="0%" height="100%" width="100%"
+             viewBox="0 0 512 512">
+      <image x="0%" y="0%" width="512" height="512" xlink:href="http://xml.csc.kth.se/utbildning/kth/kurser/DM2517/xmlpub12/lab/lab-svg/world.gif"></image>
+    </pattern>
+    <circle id="my-circle" cx="50" cy="50" r="50" fill="url(#image)" stroke="red" stroke-width="3"/>
+ </defs>
+ 
+ <g>
+  <use xlink:href = "#my-circle"> 
+  </use>
+  <use xlink:href = "#my-text">
+  	<animate id="first" attributeName="fill" attributeType="CSS" from="red" to="blue" begin="0; last.end" dur="3s" fill="freeze" />
+  	<animate id="second" attributeName="fill" attributeType="CSS" from="blue" to="yellow" begin="first.end" dur="3s" fill="freeze" />
+  	<animate id="third" attributeName="fill" attributeType="CSS" from="yellow" to="green" begin="second.end" dur="3s" fill="freeze" />
+  	<animate id="last" attributeName="fill" attributeType="CSS" from="green" to="red" begin="third.end" dur="3s" fill="freeze" />
+  </use>
+
+  <animateTransform id="rotate-right" attributeType="xml" attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" begin="0; moveup.end" dur="1s" repeatCount="2" />
+  <animateTransform id="rotate-left" attributeType="xml" attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" begin="movedown.end" dur="1s" repeatCount="2" />
+  <animateMotion id="movedown" path="M 0 0 L 0 314" dur="2s" begin="0; moveup.end" fill="freeze" />
+  <animateMotion id="moveup" path="M 0 314 L 0 0" dur="2s" begin="movedown.end" fill="freeze" />
+
+ </g>
+</svg>

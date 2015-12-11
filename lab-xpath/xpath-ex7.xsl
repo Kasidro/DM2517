@@ -3,6 +3,11 @@
 	<xsl:output method="html"/>
 
 	<xsl:template match="/">
-  		<p>Hello world excercise 7!</p>
+  		<xsl:apply-templates select="//PERSONELECTION[not(@NAME=preceding::PERSONELECTION/@NAME) and contains(@NAME,'R')]"/>
+	</xsl:template>
+
+
+	<xsl:template match="PERSONELECTION">
+		<p><xsl:value-of select="@NAME"/></p>
 	</xsl:template>
 </xsl:stylesheet>
